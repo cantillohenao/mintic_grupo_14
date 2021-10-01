@@ -1,3 +1,14 @@
+// establish an express app
+const express = require('express')
+const app = express()
+
+// allow requests from outside resources like postman, or your frontend if you choose to build that out
+const cors = require('cors')
+app.use(cors())
+
+// app will serve and receive data in a JSON format
+app.use(express.json())
+
 // the messenger between our app and our database
 const mongoose = require('mongoose')
 
